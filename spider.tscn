@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1r4siy7rlech"]
+
+[ext_resource type="PackedScene" uid="uid://b66lo8w7hu8lq" path="res://bee.tscn" id="1_yw8x1"]
+[ext_resource type="Texture2D" uid="uid://4l8hwnbpyohm" path="res://art/spider.png" id="2_jeei3"]
+
+[node name="Spider" instance=ExtResource("1_yw8x1")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_jeei3")
