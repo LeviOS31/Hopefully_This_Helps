@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Node2D.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+button = NodePath("Control/TextureButton")
+
+[node name="Control" type="Control" parent="."]
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureButton" type="TextureButton" parent="Control"]
+margin_left = 926.0
+margin_top = 517.0
+margin_right = 990.0
+margin_bottom = 581.0
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 2 )
+texture_hover = ExtResource( 2 )
+texture_disabled = ExtResource( 2 )
+texture_focused = ExtResource( 2 )
+
+[node name="Slidesnode" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Slidesnode"]
+position = Vector2( 523, 286 )
+scale = Vector2( 14.3516, 5.4375 )
+texture = ExtResource( 2 )
+
+[node name="Sprite2" type="Sprite" parent="Slidesnode"]
+position = Vector2( 1484, 282 )
+scale = Vector2( 14.3516, 5.4375 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="Slidesnode"]
+position = Vector2( 2448.25, 284 )
+scale = Vector2( 14.3516, 5.4375 )
+texture = ExtResource( 2 )
+
+[node name="Sprite4" type="Sprite" parent="Slidesnode"]
+position = Vector2( 3409.25, 280 )
+scale = Vector2( 14.3516, 5.4375 )
+texture = ExtResource( 2 )
+
+[connection signal="pressed" from="Control/TextureButton" to="." method="_on_TextureButton_pressed"]
